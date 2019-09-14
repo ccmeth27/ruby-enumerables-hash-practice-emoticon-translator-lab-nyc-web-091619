@@ -18,8 +18,13 @@ def get_japanese_emoticon(file_path, english_emoticon)
   if lib["get_emoticon"].include?(english_emoticon)
     lib["get_emoticon"][english_emoticon]
   else
+    "Sorry, that emoticon was not found"
 end
 
 def get_english_meaning(file_path, japanese_emoticon)
-  # code goes here
+  lib = load_library(file_path)
+  if lib["get_emoticon"].include?(japanese_emoticon)
+    lib["get_emoticon"][japanese_emoticon]
+  else
+    "Sorry, that emoticon was not found"
 end
