@@ -2,7 +2,7 @@ require 'pry'
 require 'yaml'
 
 
-def load_library
+def load_library(file_path)
   get_emoticon = YAML.load_file('emoticons.yml')
   result = {"get_meaning" => {}, "get_emoticon" => {}}
   get_emoticon.each do |meaning, emoticons|
